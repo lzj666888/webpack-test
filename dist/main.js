@@ -1,1 +1,0 @@
-new class{constructor(){document.write("hello world")}};

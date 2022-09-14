@@ -1,7 +1,3 @@
-class Test {
-    constructor() {
-        document.write("hello world");
-    }
-}
+require("./main.js")
 
-new Test();
+console.log('...高');

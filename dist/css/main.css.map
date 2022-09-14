@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://webpack-test/./src/index.less"],"names":[],"mappings":"AAAA,4BAGQ,SAER,CAEA,KACI,WAAJ","file":"css/main.css","sourcesContent":[".container {\n    color: red;\n    .text {\n        color: red;\n    }\n}\n\n:global(.btn){\n    color: green;\n}"],"sourceRoot":""}
