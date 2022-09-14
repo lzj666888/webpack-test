@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const rootDir = process.cwd();
 
 module.exports = {
@@ -12,25 +11,15 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-            test: /\.(jsx|js)$/,
-            use: 'babel-loader',
-            exclude: /node_modules/,
-        }, 
         {
             test: /\.(le|c)ss$/,
             use: [
-                // 'style-loader',
-                MiniCssExtractPlugin.loader,
-
+                'style-loader',
                 {
                     loader: 'css-loader',
                     options: {
-                        // modules: true,
                         modules: {
                             localIdentName: "[local]__[hash:base64:5]",
-                            mode: "global",
-                            exportGlobals: true,
                         },
                     }
                 } ,
@@ -38,10 +27,6 @@ module.exports = {
             ],
             exclude: /node_modules/,
         },
-        {
-            test: /\.(png|jpeg|jpg|svg)$/i,
-            type: 'asset'
-        }
     ],
     },
     plugins: [
@@ -50,7 +35,6 @@ module.exports = {
         inject: 'body',
         scriptLoading: 'blocking',
     }),
-     new MiniCssExtractPlugin({filename: 'css/[name].css'})
     ],
 }
 

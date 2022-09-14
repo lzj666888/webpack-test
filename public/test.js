@@ -1,4 +1,4 @@
-console.log('测试public下面目录的静态文件引入~');
+// console.log('测试public下面目录的静态文件引入~');
 
 class Name {
     constructor(name) {
