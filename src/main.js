@@ -1,5 +1,6 @@
 
 import styles from "./index.less";
+import dd from "./index.css";
 // import xingkong from "../assets/星空壁纸.jpeg";
 
 class Test {
@@ -11,7 +12,7 @@ class Test {
     
     renderDom() {
         const dom = document.createElement("div");
-        dom.className = styles.container;
+        dom.className = styles.container + " " + dd.container;
         dom.innerText = 'hello world';
         document.body.appendChild(dom);
     }
