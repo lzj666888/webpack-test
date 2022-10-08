@@ -1,8 +1,11 @@
 const path = require('path');
+const baseConfig = require ('./webpack.base')
+const { merge } = require ("webpack-merge");
+const { HotModuleReplacementPlugin,  } = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const rootDir = process.cwd();
 
-module.exports = {
+module.exports = merge(baseConfig, {
   mode: "development",
   entry: path.resolve(rootDir, 'src/index.js'),
   output: {
@@ -10,24 +13,7 @@ module.exports = {
       path: path.join(rootDir, 'dist')
   },
   module: {
-      rules: [
-      {
-          test: /\.(le|c)ss$/,
-          use: [
-              'style-loader',
-              {
-                  loader: 'css-loader',
-                  options: {
-                      modules: {
-                          localIdentName: "[local]__[hash:base64:5]",
-                      },
-                  }
-              } ,
-              'less-loader',
-          ],
-          exclude: /node_modules/,
-      },
-  ],
+      rules: [],
   },
       devServer: {
         port: '3001', // 默认是 8080
@@ -50,5 +36,8 @@ module.exports = {
         inject: 'body',
         scriptLoading: 'blocking',
     }),
+    new HotModuleReplacementPlugin({
+      
+    })
   ],
-}
+})

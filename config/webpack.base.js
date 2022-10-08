@@ -6,11 +6,19 @@ module.exports = {
     mode: "development",
     entry: path.resolve(rootDir, 'src/index.js'),
     output: {
-        filename: "bundle.[contenthash:8].js",
+        filename: "haha.js",
         path: path.join(rootDir, 'dist')
     },
     module: {
         rules: [
+        {
+            test: /\.(jsx|js)$/,
+            use: 'babel-loader',
+            exclude: /node_modules/,
+            options: {
+                presets: ["@babel/preset-react"]
+            }
+        },
         {
             test: /\.(le|c)ss$/,
             use: [

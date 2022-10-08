@@ -1,6 +1,7 @@
 
 import styles from "./index.less";
 import dd from "./index.css";
+import React from "react";
 // import xingkong from "../assets/星空壁纸.jpeg";
 
 class Test {
@@ -13,7 +14,7 @@ class Test {
     renderDom() {
         const dom = document.createElement("div");
         dom.className = styles.container + " " + dd.container;
-        dom.innerText = 'hello world';
+        dom.innerText = 'hello world for mare';
         document.body.appendChild(dom);
     }
 
@@ -29,7 +30,7 @@ new Test();
 // 
 console.log('haha');
 
-// console.log('缓存了？？？');
+console.log('缓存了？？？');
 
 console.log('没有吧？what??热重载？？？');
 
