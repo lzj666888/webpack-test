@@ -7,7 +7,7 @@ const rootDir = process.cwd();
 
 module.exports = merge(baseConfig, {
   mode: "development",
-  entry: path.resolve(rootDir, 'src/index.js'),
+  entry: path.resolve(rootDir, 'src/main.jsx'),
   output: {
       filename: "bundle.[contenthash:8].js",
       path: path.join(rootDir, 'dist')

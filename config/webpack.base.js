@@ -4,7 +4,7 @@ const rootDir = process.cwd();
 
 module.exports = {
     mode: "development",
-    entry: path.resolve(rootDir, 'src/index.js'),
+    entry: path.resolve(rootDir, 'src/main.jsx'),
     output: {
         filename: "haha.js",
         path: path.join(rootDir, 'dist')
@@ -13,7 +13,7 @@ module.exports = {
         rules: [
         {
             test: /\.(jsx|js)$/,
-            use: 'babel-loader',
+            loader: 'babel-loader',
             exclude: /node_modules/,
             options: {
                 presets: ["@babel/preset-react"]

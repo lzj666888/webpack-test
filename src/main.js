@@ -1,7 +1,6 @@
 
 import styles from "./index.less";
 import dd from "./index.css";
-import React from "react";
 // import xingkong from "../assets/星空壁纸.jpeg";
 
 class Test {
