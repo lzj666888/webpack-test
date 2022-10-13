@@ -12,6 +12,10 @@ module.exports = {
     module: {
         rules: [
         {
+            test: /\.(tsx|ts)$/,
+            loader: 'ts-loader',
+        },
+        {
             test: /\.(jsx|js)$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
@@ -25,11 +29,11 @@ module.exports = {
                 'style-loader',
                 {
                     loader: 'css-loader',
-                    options: {
-                        modules: {
-                            localIdentName: "[local]__[hash:base64:5]",
-                        },
-                    }
+                    // options: {
+                    //     modules: {
+                    //         localIdentName: "[local]__[hash:base64:5]",
+                    //     },
+                    // }
                 } ,
                 'less-loader',
             ],
@@ -44,5 +48,11 @@ module.exports = {
         scriptLoading: 'blocking',
     }),
     ],
+    resolve: {
+        alias: {
+            "@": path.join(__dirname,"../src"), // 目录快捷方式配置
+        },
+        extensions: [".js", ".ts", ".jsx", ".tsx", ".json"],//以上文件引入可以省略后缀名
+    }
 }
 

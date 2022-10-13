@@ -1,0 +1,26 @@
+{
+    "include": [
+      "src",
+      "config",
+    ],
+    "compilerOptions": {
+      "strict": true,
+      "esModuleInterop": true,
+      "noImplicitAny": true,
+      "lib": ["dom", "es2015"],
+      "jsx": "react",
+      "baseUrl": ".",
+      "paths": {
+        // "@server/*": ["../../server/app/*"],
+        // "@/*": ["./src/*"],
+        // "@LaunchList/*": ["./src/pages/launchManager/LaunchList/*"],
+        // "@LaunchAsset/*": ["./src/pages/launchManager/LaunchAsset/*"],
+        // "@LaunchTask/*": ["./src/pages/launchManager/LaunchTask/*"],
+        // "@LaunchStrategy/*": ["./src/pages/launchManager/LaunchStrategy/*"]
+      },
+      "sourceMap": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true
+    }
+  }
+  

@@ -1,5 +1,14 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css"
+import Calculator from "./components/calculator";
+import Home from "./components/Home";
 
-export default function App(){
-    return <div>hello word</div>
+function App(){
+    return <div className="container">hello wo??
+    <Calculator/>
+    <Home/>
+    </div>
 }
+
+ReactDOM.render(<App />, document.getElementById("app"))
